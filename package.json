@@ -1,0 +1,36 @@
+{
+  "name": "@achilliesbot/x402-paywall",
+  "version": "0.1.0",
+  "description": "Drop-in React components and hooks for gating any website behind USDC-on-Base x402 micropayments.",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": ["dist", "README.md", "LICENSE"],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts --clean",
+    "typecheck": "tsc --noEmit",
+    "test": "node --experimental-vm-modules test/run.mjs"
+  },
+  "keywords": ["x402", "usdc", "base", "paywall", "react", "micropayment", "agent"],
+  "peerDependencies": {
+    "react": ">=17"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.0",
+    "react": "^18.3.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.4.0"
+  },
+  "author": "Achilles <noreply@achillesalpha.onrender.com>",
+  "license": "MIT",
+  "engines": { "node": ">=18" },
+  "publishConfig": { "access": "public" }
+}

@@ -11,10 +11,20 @@ Zero wallet-UX work. Zero custom retry logic. Paste, configure, ship.
 
 ## Install
 
+Direct from GitHub (recommended — no registry auth):
+
 ```bash
-npm install @achilliesbot/x402-paywall
-# peer deps
-npm install react
+npm install github:achilliesbot/x402-paywall react
+# or
+pnpm add github:achilliesbot/x402-paywall react
+# or
+bun add github:achilliesbot/x402-paywall react
+```
+
+Import path stays the same:
+
+```ts
+import { X402Paywall, bankrPayer } from "@achilliesbot/x402-paywall";
 ```
 
 ## 30-second example — BANKR hosted signing

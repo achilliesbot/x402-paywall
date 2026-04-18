@@ -1,5 +1,8 @@
 node_modules/
-dist/
 *.log
 .DS_Store
 .env
+
+# Note: dist/ is intentionally committed so `npm install github:...` works
+# without running a build on the installer's machine. Regenerate with
+# `npm run build` after any src/ change.
